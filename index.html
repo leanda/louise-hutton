@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Louise Hutton — Print &amp; Graphic Design</title>
+  <meta name="description" content="Louise Hutton — senior designer. Medical communications, branding and illustration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-nav" id="top">
+    <a class="site-nav__logo" href="#top" aria-label="Louise Hutton — back to top">
+      <img src="assets/logo-pink.svg" alt="louisehutton">
+    </a>
+    <nav id="site-menu" aria-label="Sections">
+      <ul class="site-nav__links">
+        <li><a href="#medical">Medical</a></li>
+        <li><a href="#branding">Branding</a></li>
+        <li><a href="#illustration">Illustration</a></li>
+        <li><a href="#me">Me</a></li>
+      </ul>
+    </nav>
+    <button class="site-nav__toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <svg class="hero__wave" viewBox="0 0 1440 1024" preserveAspectRatio="xMinYMid slice" aria-hidden="true">
+        <defs>
+          <clipPath id="wave-clip" clipPathUnits="userSpaceOnUse">
+            <path transform="translate(-167 138) scale(0.90111 0.90137)" d="M -6 444 L 0 444 C 4.2 441.6 16.7 434.5 25 429.7 C 33.3 424.9 41.7 420 50 415.2 C 58.3 410.4 66.7 405.6 75 400.8 C 83.3 396 91.7 391.1 100 386.3 C 108.3 381.6 116.7 376.8 125 372.1 C 133.3 367.4 141.7 362.7 150 358 C 158.3 353.3 166.7 348.7 175 344 C 183.3 339.3 191.7 334.6 200 330 C 208.3 325.4 216.7 320.7 225 316.1 C 233.3 311.5 241.7 306.9 250 302.4 C 258.3 297.9 266.7 293.5 275 289.1 C 283.3 284.7 291.7 280.4 300 276.1 C 308.3 271.8 316.7 267.5 325 263.3 C 333.3 259.1 341.7 255 350 250.9 C 358.3 246.8 366.7 242.7 375 238.8 C 383.3 234.8 391.7 231 400 227.2 C 408.3 223.4 416.7 219.7 425 216.1 C 433.3 212.5 441.7 208.9 450 205.4 C 458.3 202 466.7 198.6 475 195.2 C 483.3 191.9 491.7 188.6 500 185.4 C 508.3 182.3 516.7 179.2 525 176.2 C 533.3 173.2 541.7 170.3 550 167.4 C 558.3 164.6 566.7 161.9 575 159.2 C 583.3 156.6 591.7 154 600 151.6 C 608.3 149.1 616.7 146.8 625 144.6 C 633.3 142.3 641.7 140.2 650 138.2 C 658.3 136.2 666.7 134.3 675 132.6 C 683.3 130.8 691.7 129.1 700 127.7 C 708.3 126.2 716.7 124.9 725 123.7 C 733.3 122.5 741.7 121.4 750 120.6 C 758.3 119.7 766.7 118.9 775 118.3 C 783.3 117.7 791.7 117.2 800 116.9 C 808.3 116.6 816.7 116.4 825 116.4 C 833.3 116.4 841.7 116.6 850 116.9 C 858.3 117.2 866.7 117.7 875 118.3 C 883.3 118.9 891.7 119.7 900 120.6 C 908.3 121.4 916.7 122.5 925 123.7 C 933.3 124.8 941.7 126.1 950 127.6 C 958.3 129 966.7 130.6 975 132.3 C 983.3 134.1 991.7 135.9 1000 137.9 C 1008.3 139.9 1016.7 142.1 1025 144.3 C 1033.3 146.6 1041.7 149 1050 151.6 C 1058.3 154.1 1066.7 156.8 1075 159.7 C 1083.3 162.5 1091.7 165.5 1100 168.7 C 1108.3 171.8 1116.7 175.1 1125 178.4 C 1133.3 181.8 1141.7 185.3 1150 188.8 C 1158.3 192.3 1166.7 195.9 1175 199.6 C 1183.3 203.2 1191.7 207 1200 210.9 C 1208.3 214.8 1216.7 218.8 1225 222.9 C 1233.3 227 1241.7 231.1 1250 235.3 C 1258.3 239.6 1266.7 243.9 1275 248.2 C 1283.3 252.6 1291.7 256.9 1300 261.3 C 1308.3 265.8 1316.7 270.3 1325 274.8 C 1333.3 279.3 1341.7 283.8 1350 288.3 C 1358.3 292.9 1366.7 297.5 1375 302.1 C 1383.3 306.7 1391.7 311.4 1400 316 C 1408.3 320.6 1416.7 325.3 1425 330 C 1433.3 334.7 1441.7 339.5 1450 344 C 1458.3 348.5 1466.7 353.3 1475 357.1 C 1483.3 360.9 1491.7 364.6 1500 366.8 C 1508.3 369 1516.7 370.4 1525 370.4 C 1533.3 370.5 1541.7 369.1 1550 367.3 C 1558.3 365.6 1566.7 362.7 1575 359.9 C 1583.3 357.1 1591.7 353.7 1600 350.4 C 1608.3 347.2 1616.7 343.8 1625 340.3 C 1633.3 336.9 1641.7 333.3 1650 329.6 C 1658.3 325.9 1666.7 322 1675 318.1 C 1683.3 314.2 1691.7 310.3 1700 306.3 C 1708.3 302.3 1716.7 298.2 1725 294.1 C 1733.3 290 1741.7 285.9 1750 281.7 C 1758.3 277.4 1766.7 273.1 1775 268.8 C 1783.3 264.4 1791.7 260.1 1800 255.7 C 1808.3 251.2 1816.7 246.7 1825 242.2 C 1833.3 237.7 1841.7 233.2 1850 228.7 C 1858.3 224.1 1866.7 219.5 1875 214.9 C 1883.3 210.3 1891.7 205.7 1900 201.1 C 1908.3 196.5 1916.7 191.9 1925 187.3 C 1933.3 182.8 1941.7 178.2 1950 173.7 C 1958.3 169.1 1966.7 164.5 1975 159.9 C 1983.3 155.3 1991.7 150.7 2000 146.1 C 2008.3 141.5 2016.7 136.9 2025 132.4 C 2033.3 127.9 2041.7 123.5 2050 119.1 C 2058.3 114.7 2066.7 110.4 2075 106.1 C 2083.3 101.8 2091.7 97.5 2100 93.3 C 2108.3 89.1 2116.7 85 2125 80.9 C 2133.3 76.8 2141.7 72.7 2150 68.8 C 2158.3 64.9 2166.7 61 2175 57.3 C 2183.3 53.6 2191.7 50 2200 46.6 C 2208.3 43.1 2216.7 39.8 2225 36.7 C 2233.3 33.5 2241.7 30.5 2250 27.7 C 2258.3 24.9 2266.7 22.2 2275 19.8 C 2283.3 17.4 2291.7 15.1 2300 13.1 C 2308.3 11.1 2316.7 9.4 2325 8 C 2333.3 6.6 2341.7 5.4 2350 4.7 C 2358.3 3.9 2366.7 3.5 2375 3.4 C 2383.3 3.4 2391.7 3.8 2400 4.6 C 2408.3 5.4 2416.7 6.5 2425 8.2 C 2433.3 9.9 2441.7 12.1 2450 14.8 C 2458.3 17.5 2466.7 20.6 2475 24.4 C 2483.3 28.3 2491.7 32.6 2500 37.7 C 2508.3 42.7 2516.7 48.4 2525 54.8 C 2533.3 61.2 2541.7 68.3 2550 76.2 C 2558.3 84.2 2566.7 92.8 2575 102.6 C 2583.3 112.3 2591.7 122.7 2600 134.6 C 2608.3 146.4 2616.7 159 2625 173.4 C 2633.3 187.9 2641.7 197.9 2650 221.3 C 2658.3 244.8 2666.7 270 2675 314 C 2683.3 358 2694.3 415.9 2700 485.6 C 2705.7 555.2 2707.5 690.9 2709 732 L 2715 732 L 2715 -2 L 2709 -2 C 2707.5 33.2 2705.7 152.6 2700 209.4 C 2694.3 266.3 2683.3 309.6 2675 339.2 C 2666.7 368.9 2658.3 378.1 2650 387.3 C 2641.7 396.6 2633.3 392.2 2625 394.7 C 2616.7 397.1 2608.3 399.5 2600 401.9 C 2591.7 404.3 2583.3 406.6 2575 409 C 2566.7 411.4 2558.3 413.7 2550 416 C 2541.7 418.3 2533.3 420.7 2525 423 C 2516.7 425.3 2508.3 427.7 2500 430 C 2491.7 432.3 2483.3 434.6 2475 436.9 C 2466.7 439.1 2458.3 441.4 2450 443.6 C 2441.7 445.7 2433.3 447.8 2425 449.9 C 2416.7 452 2408.3 454 2400 456 C 2391.7 458 2383.3 460 2375 462 C 2366.7 464 2358.3 466 2350 467.9 C 2341.7 469.8 2333.3 471.7 2325 473.6 C 2316.7 475.4 2308.3 477.1 2300 478.8 C 2291.7 480.5 2283.3 482.1 2275 483.7 C 2266.7 485.2 2258.3 486.7 2250 488.1 C 2241.7 489.6 2233.3 491 2225 492.3 C 2216.7 493.7 2208.3 494.9 2200 496.1 C 2191.7 497.3 2183.3 498.6 2175 499.7 C 2166.7 500.8 2158.3 501.8 2150 502.8 C 2141.7 503.8 2133.3 504.7 2125 505.6 C 2116.7 506.4 2108.3 507.1 2100 507.8 C 2091.7 508.4 2083.3 509.1 2075 509.6 C 2066.7 510.1 2058.3 510.4 2050 510.8 C 2041.7 511.1 2033.3 511.4 2025 511.6 C 2016.7 511.7 2008.3 511.8 2000 511.8 C 1991.7 511.8 1983.3 511.7 1975 511.4 C 1966.7 511.2 1958.3 510.9 1950 510.4 C 1941.7 510 1933.3 509.4 1925 508.8 C 1916.7 508.1 1908.3 507.4 1900 506.6 C 1891.7 505.7 1883.3 504.7 1875 503.7 C 1866.7 502.6 1858.3 501.4 1850 500.1 C 1841.7 498.8 1833.3 497.3 1825 495.8 C 1816.7 494.2 1808.3 492.6 1800 490.8 C 1791.7 489 1783.3 487.1 1775 485.1 C 1766.7 483.1 1758.3 480.9 1750 478.6 C 1741.7 476.2 1733.3 473.8 1725 471.1 C 1716.7 468.4 1708.3 465.5 1700 462.6 C 1691.7 459.6 1683.3 456.5 1675 453.2 C 1666.7 449.9 1658.3 446.5 1650 442.9 C 1641.7 439.3 1633.3 435.6 1625 431.8 C 1616.7 427.9 1608.3 423.9 1600 419.8 C 1591.7 415.7 1583.3 411.3 1575 407.3 C 1566.7 403.4 1558.3 399.3 1550 396.1 C 1541.7 392.9 1533.3 390 1525 388.3 C 1516.7 386.7 1508.3 386.1 1500 386.1 C 1491.7 386.1 1483.3 387.3 1475 388.4 C 1466.7 389.6 1458.3 391.6 1450 393.1 C 1441.7 394.6 1433.3 396.2 1425 397.6 C 1416.7 398.9 1408.3 400.1 1400 401.1 C 1391.7 402.1 1383.3 402.9 1375 403.7 C 1366.7 404.4 1358.3 405 1350 405.7 C 1341.7 406.3 1333.3 406.8 1325 407.6 C 1316.7 408.3 1308.3 409 1300 410 C 1291.7 411 1283.3 412.1 1275 413.3 C 1266.7 414.6 1258.3 416.1 1250 417.7 C 1241.7 419.3 1233.3 421.1 1225 423 C 1216.7 424.9 1208.3 427.1 1200 429.3 C 1191.7 431.6 1183.3 434 1175 436.6 C 1166.7 439.1 1158.3 441.8 1150 444.7 C 1141.7 447.5 1133.3 450.5 1125 453.7 C 1116.7 456.8 1108.3 460.1 1100 463.6 C 1091.7 467 1083.3 470.6 1075 474.2 C 1066.7 477.9 1058.3 481.7 1050 485.6 C 1041.7 489.4 1033.3 493.5 1025 497.6 C 1016.7 501.6 1008.3 505.9 1000 510.1 C 991.7 514.4 983.3 518.7 975 523.1 C 966.7 527.5 958.3 531.9 950 536.4 C 941.7 540.9 933.3 545.5 925 550.1 C 916.7 554.7 908.3 559.4 900 564 C 891.7 568.6 883.3 573.3 875 578 C 866.7 582.7 858.3 587.4 850 592 C 841.7 596.6 833.3 601.3 825 605.9 C 816.7 610.5 808.3 615.1 800 619.6 C 791.7 624 783.3 628.5 775 632.8 C 766.7 637.1 758.3 641.4 750 645.4 C 741.7 649.5 733.3 653.5 725 657.3 C 716.7 661.2 708.3 664.9 700 668.4 C 691.7 672 683.3 675.4 675 678.7 C 666.7 681.9 658.3 685.1 650 688 C 641.7 690.9 633.3 693.6 625 696.1 C 616.7 698.6 608.3 700.8 600 702.8 C 591.7 704.7 583.3 706.4 575 707.8 C 566.7 709.2 558.3 710.3 550 711.1 C 541.7 712 533.3 712.6 525 712.9 C 516.7 713.2 508.3 713.3 500 713.1 C 491.7 712.9 483.3 712.5 475 711.8 C 466.7 711 458.3 710 450 708.7 C 441.7 707.4 433.3 705.7 425 703.9 C 416.7 702 408.3 699.9 400 697.6 C 391.7 695.2 383.3 692.7 375 690 C 366.7 687.3 358.3 684.3 350 681.1 C 341.7 677.9 333.3 674.6 325 671 C 316.7 667.4 308.3 663.5 300 659.6 C 291.7 655.6 283.3 651.4 275 647.1 C 266.7 642.8 258.3 638.2 250 633.6 C 241.7 628.9 233.3 624 225 619 C 216.7 614 208.3 608.7 200 603.3 C 191.7 597.9 183.3 592.4 175 586.7 C 166.7 580.9 158.3 575.1 150 569 C 141.7 562.9 133.3 556.7 125 550.3 C 116.7 543.9 108.3 537.4 100 530.7 C 91.7 523.9 83.3 517.1 75 510 C 66.7 502.9 58.3 495.6 50 488.1 C 41.7 480.6 33.3 472.9 25 465 C 16.7 457.1 4.2 445 0 441 L -6 441 Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#wave-clip)">
+          <image href="assets/wave-fill.png" x="-167" y="138" width="2442" height="658" preserveAspectRatio="none"/>
+        </g>
+      </svg>
+      <img class="hero__logo" src="assets/logo-white.svg" alt="louisehutton">
+      <a class="hero__scroll" href="#medical" aria-label="Scroll to work"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></a>
+    </section>
+
+    <section class="work work--wash-pink" id="medical">
+      <h2>Medical</h2>
+      <div class="work__grid" data-category="medical"></div>
+    </section>
+
+    <section class="work work--wash-peach" id="branding">
+      <h2>Branding</h2>
+      <div class="work__grid" data-category="branding"></div>
+    </section>
+
+    <section class="work work--wash-pink" id="illustration">
+      <h2>Illustration</h2>
+      <div class="work__grid" data-category="illustration"></div>
+    </section>
+
+    <section class="me" id="me">
+      <h2>Me</h2>
+      <p>Senior Designer with over two decades of experience delivering creative solutions in high-pressure studio environments.</p>
+      <p>Extensive experience in art direction and end-to-end project delivery, with a consistent record of driving client growth, increasing profitability and securing new business opportunities.</p>
+      <p>Proven ability to mentor teams and deliver impactful, commercially successful design media.</p>
+      <a class="me__email" href="mailto:geometricube@yahoo.co.uk">geometricube@yahoo.co.uk</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="#top" aria-label="Back to top">
+      <img src="assets/logo-pink.svg" alt="louisehutton">
+    </a>
+  </footer>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Project viewer" hidden>
+    <button class="modal__close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <button class="modal__arrow modal__arrow--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+    <figure class="modal__stage">
+      <img class="modal__image" src="" alt="">
+      <figcaption class="modal__caption">
+        <span class="modal__title"></span>
+        <span class="modal__counter"></span>
+      </figcaption>
+    </figure>
+    <button class="modal__arrow modal__arrow--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
