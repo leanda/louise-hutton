@@ -73,6 +73,17 @@ document.querySelectorAll(".work__grid").forEach((grid) => {
     });
 });
 
+// ---------- Back to top ----------
+// the header carrying #top is position: fixed, so its scroll position never
+// changes and the browser's native anchor jump has nothing to scroll to
+
+document.querySelectorAll('a[href="#top"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
 // ---------- Mobile menu ----------
 
 const siteNav = document.querySelector(".site-nav");
