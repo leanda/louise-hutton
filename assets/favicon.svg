@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#E43A6C"/>
+  <!-- the honeycomb from the logo (Group 1, first four hexagons), redrawn with a heavier line for small sizes -->
+  <g transform="translate(10 16.75) scale(0.1686)" fill="none" stroke="#fff" stroke-width="15" stroke-linejoin="round">
+    <polygon points="0,134.5 27,87.7 81,87.7 108,134.5 81,181.3 27,181.3"/>
+    <polygon points="76,89.5 103,42.7 157,42.7 184,89.5 157,136.3 103,136.3"/>
+    <polygon points="153,46.5 180,-0.3 234,-0.3 261,46.5 234,93.3 180,93.3"/>
+    <polygon points="152,134.5 179,87.7 233,87.7 260,134.5 233,181.3 179,181.3"/>
+  </g>
+</svg>
