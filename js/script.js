@@ -2,53 +2,61 @@
 // category: medical | branding | illustration
 // images: files in assets/work/, first one is the card thumbnail
 // thumb (optional): use a different image as the thumbnail, e.g. thumb: 2
+// thumbPosition (optional): where the thumbnail crop is centred, e.g. thumbPosition: "50% 20%"
 const projects = [
   {
     category: "medical",
     title: "Discover",
-    images: ["discover-1.png", "discover-2.png", "discover-3.png"]
+    images: ["discover-1.webp", "discover-2.webp", "discover-3.webp", "discover-4.webp", "discover-5.webp", "discover-6.webp", "discover-7.webp", "discover-8.webp", "discover-9.webp"],
+    thumbPosition: "50% 15%"
   },
   {
     category: "medical",
     title: "Spotlight",
-    images: ["spotlight-1.png", "spotlight-2.png", "spotlight-3.png", "spotlight-4.png"]
+    images: ["spotlight-1.webp", "spotlight-2.webp", "spotlight-3.webp", "spotlight-4.webp", "spotlight-5.webp"]
   },
   {
     category: "medical",
     title: "Pulse",
-    images: ["pulse-1.png", "pulse-2.png"]
+    images: ["pulse-1.webp", "pulse-2.webp"]
   },
   {
     category: "medical",
     title: "Infographics",
-    images: ["infographics-1.png", "infographics-2.png"]
+    images: ["infographics-1.webp", "infographics-2.webp"]
   },
   {
     category: "branding",
     title: "Atlas",
-    images: ["atlas-1.png", "atlas-2.png", "atlas-3.png", "atlas-4.png"]
+    images: ["atlas-1.webp", "atlas-2.webp", "atlas-3.webp", "atlas-4.webp", "atlas-5.webp"]
   },
   {
     category: "branding",
     title: "Mixology",
-    images: ["mixology-1.png", "mixology-2.png"]
+    images: ["mixology-1.webp", "mixology-2.webp", "mixology-3.webp", "mixology-4.webp"]
   },
   {
     category: "branding",
     title: "Product Design",
-    images: ["product-design-1.png", "product-design-2.png", "product-design-3.png"],
-    thumb: 3
+    images: ["product-design-1.webp", "product-design-2.webp", "product-design-3.webp"],
+    thumb: 3,
+    thumbPosition: "50% 75%"
+  },
+  {
+    category: "branding",
+    title: "Merck Portal",
+    images: ["merck-1.webp", "merck-2.webp", "merck-3.webp", "merck-4.webp", "merck-5.webp"]
   },
   {
     category: "illustration",
     title: "Music",
-    images: ["music-1.png", "music-2.png", "music-3.png"],
+    images: ["music-1.webp", "music-2.webp", "music-3.webp", "music-4.webp"],
     thumb: 2
   },
   {
     category: "illustration",
     title: "Landscapes",
-    images: ["landscapes-1.png", "landscapes-2.png", "landscapes-3.png", "landscapes-4.png", "landscapes-5.png"]
+    images: ["landscapes-1.webp", "landscapes-2.webp", "landscapes-3.webp", "landscapes-4.webp", "landscapes-5.webp"]
   }
 ];
 
@@ -66,7 +74,7 @@ document.querySelectorAll(".work__grid").forEach((grid) => {
       card.type = "button";
       const thumb = project.images[(project.thumb || 1) - 1];
       card.innerHTML = `
-        <img class="card__image" src="${workPath}${thumb}" alt="${project.title}" loading="lazy">
+        <img class="card__image" src="${workPath}${thumb}" alt="${project.title}" loading="lazy"${project.thumbPosition ? ` style="object-position: ${project.thumbPosition}"` : ""}>
         <span class="card__label">${project.title}</span>`;
       card.addEventListener("click", () => openModal(project));
       grid.appendChild(card);
