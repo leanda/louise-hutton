@@ -284,11 +284,17 @@ img {
   max-height: 100vh;
 }
 
-.modal__image {
+.modal__image,
+.modal__video {
   max-height: calc(100vh - 12rem);
   max-width: min(80vw, 64rem);
   object-fit: contain;
   border-radius: var(--radius);
+}
+
+.modal__image[hidden],
+.modal__video[hidden] {
+  display: none;
 }
 
 .modal__caption {

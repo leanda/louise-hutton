@@ -1,6 +1,7 @@
 // To add or change work, edit this list only.
 // category: medical | branding | illustration
 // images: files in assets/work/, first one is the card thumbnail
+// a .mp4 can be listed too (not as the first item), with a matching name-poster.webp beside it
 // thumb (optional): use a different image as the thumbnail, e.g. thumb: 2
 // thumbPosition (optional): where the thumbnail crop is centred, e.g. thumbPosition: "50% 20%"
 const projects = [
@@ -18,7 +19,7 @@ const projects = [
   {
     category: "medical",
     title: "Pulse",
-    images: ["pulse-1.webp", "pulse-2.webp"]
+    images: ["pulse-1.webp", "pulse-2.webp", "pulse-3.mp4"]
   },
   {
     category: "medical",
@@ -135,6 +136,7 @@ document.addEventListener("keydown", (event) => {
 
 const modal = document.getElementById("modal");
 const modalImage = modal.querySelector(".modal__image");
+const modalVideo = modal.querySelector(".modal__video");
 const modalTitle = modal.querySelector(".modal__title");
 const modalCounter = modal.querySelector(".modal__counter");
 const prevButton = modal.querySelector(".modal__arrow--prev");
@@ -157,14 +159,26 @@ function openModal(project) {
 
 function closeModal() {
   modal.hidden = true;
+  modalVideo.pause();
   document.body.style.overflow = "";
   if (lastFocused) lastFocused.focus();
 }
 
 function showImage() {
   const { title, images } = currentProject;
-  modalImage.src = workPath + images[currentIndex];
-  modalImage.alt = `${title} — image ${currentIndex + 1} of ${images.length}`;
+  const file = images[currentIndex];
+  const isVideo = file.endsWith(".mp4");
+  modalVideo.pause();
+  modalImage.hidden = isVideo;
+  modalVideo.hidden = !isVideo;
+  if (isVideo) {
+    modalVideo.poster = workPath + file.replace(".mp4", "-poster.webp");
+    modalVideo.src = workPath + file;
+    modalVideo.setAttribute("aria-label", `${title} — video ${currentIndex + 1} of ${images.length}`);
+  } else {
+    modalImage.src = workPath + file;
+    modalImage.alt = `${title} — image ${currentIndex + 1} of ${images.length}`;
+  }
   modalTitle.textContent = title;
   modalCounter.textContent = images.length > 1 ? `${currentIndex + 1} / ${images.length}` : "";
   prevButton.disabled = currentIndex === 0;
