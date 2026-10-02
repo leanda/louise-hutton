@@ -52,6 +52,29 @@ img {
   width: auto;
 }
 
+/* Logo links (header and footer): the link is the hit area, not the image */
+.site-nav__logo,
+.site-footer__top {
+  display: block;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  border-radius: var(--radius);
+}
+
+.site-nav__logo img,
+.site-footer__top img {
+  pointer-events: none;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.site-nav__logo:hover img,
+.site-nav__logo:focus-visible img,
+.site-footer__top:hover img,
+.site-footer__top:focus-visible img {
+  transform: translateY(-0.25rem);
+  filter: drop-shadow(0 0.5rem 0.75rem rgba(224, 40, 98, 0.3));
+}
+
 .site-nav__links {
   display: flex;
   gap: 2rem;
@@ -258,6 +281,79 @@ img {
   width: auto;
 }
 
+.site-footer__top {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  color: var(--pink);
+}
+
+.site-footer__arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.site-footer__top:hover .site-footer__arrow,
+.site-footer__top:focus-visible .site-footer__arrow {
+  opacity: 1;
+  transform: translateY(-0.25rem);
+}
+
+/* ---------- Back to top button ---------- */
+
+.to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 9;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: var(--pink);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0.25rem 1.5rem rgba(224, 40, 98, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1rem);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s, color 0.2s, background-color 0.2s, box-shadow 0.3s;
+}
+
+.to-top svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.to-top.is-visible:hover,
+.to-top.is-visible:focus-visible {
+  color: #fff;
+  background: var(--pink);
+  box-shadow: 0 0.75rem 2rem rgba(224, 40, 98, 0.3);
+  transform: translateY(-0.25rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .to-top,
+  .to-top.is-visible:hover,
+  .site-footer__arrow,
+  .site-nav__logo img,
+  .site-footer__top img {
+    transform: none !important;
+  }
+}
+
 /* ---------- Modal ---------- */
 
 .modal {
@@ -364,6 +460,11 @@ img {
 @media (max-width: 40rem) {
   .site-nav {
     padding: 0 1rem;
+  }
+
+  .to-top {
+    right: 1rem;
+    bottom: 1rem;
   }
 
   .site-nav__logo {

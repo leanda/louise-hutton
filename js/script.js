@@ -93,6 +93,13 @@ document.querySelectorAll('a[href="#top"]').forEach((link) => {
   });
 });
 
+// floating button appears once the hero has scrolled out of view
+const toTop = document.querySelector(".to-top");
+
+new IntersectionObserver(([entry]) => {
+  toTop.classList.toggle("is-visible", !entry.isIntersecting);
+}).observe(document.querySelector(".hero"));
+
 // ---------- Mobile menu ----------
 
 const siteNav = document.querySelector(".site-nav");
